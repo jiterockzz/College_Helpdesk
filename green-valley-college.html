@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Valley College</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#1b4332; --ridge:#0e261c; --meadow:#d8e6cf; --mist:#f2f6ee;
+  --wheat:#e2a82b; --ink:#16231c; --white:#fff;
+  --display:'Young Serif',Georgia,serif; --body:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--mist);line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--wheat);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+header{position:absolute;top:0;left:0;right:0;z-index:5}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;flex-wrap:wrap;gap:12px}
+.logo{font-family:var(--display);font-size:1.3rem;color:var(--white);text-decoration:none}
+nav ul{list-style:none;display:flex;gap:24px;padding:0;flex-wrap:wrap}
+nav ul a{color:var(--white);text-decoration:none;font-weight:500}
+nav ul a:hover{text-decoration:underline;text-underline-offset:5px}
+
+.hero{background:var(--forest);color:var(--white);padding:150px 0 0;position:relative;overflow:hidden}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.8rem,9vw,6.5rem);line-height:1;max-width:11ch}
+.hero p{max-width:46ch;margin-top:24px;font-size:1.15rem;color:var(--meadow)}
+.btns{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:700;text-decoration:none}
+.btn.primary{background:var(--wheat);color:var(--ridge)}
+.btn.ghost{border:2px solid var(--meadow);color:var(--white)}
+.hills{display:block;width:100%;height:auto;margin-top:-40px}
+
+section{padding:80px 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.15;margin-bottom:12px}
+.lead{max-width:56ch;color:#3d5246;margin-bottom:40px}
+
+.programs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:2px solid var(--forest)}
+.prog{padding:28px 24px 28px 0;border-bottom:1px solid #b9cbb0}
+.prog h3{font-family:var(--display);font-weight:400;font-size:1.35rem;color:var(--forest)}
+.prog p{margin-top:6px;color:#3d5246}
+.prog small{display:block;margin-top:10px;font-weight:700;color:var(--forest)}
+
+.dark{background:var(--ridge);color:var(--white)}
+.dark .lead{color:var(--meadow)}
+.timeline{list-style:none;padding:0;border-left:3px solid var(--wheat);margin-left:6px}
+.timeline li{padding:0 0 28px 28px;position:relative}
+.timeline li::before{content:"";position:absolute;left:-10px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--wheat)}
+.timeline strong{display:block;font-family:var(--display);font-weight:400;font-size:1.2rem}
+.timeline span{color:var(--meadow)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px}
+.stats div{background:var(--meadow);padding:24px;border-radius:6px 28px 6px 28px}
+.stats b{display:block;font-family:var(--display);font-weight:400;font-size:2.2rem;color:var(--forest)}
+
+form{display:grid;gap:14px;max-width:480px}
+label{font-weight:500}
+input,textarea{width:100%;padding:12px;border:1.5px solid #9db591;border-radius:6px;font:inherit;background:var(--white)}
+button{cursor:pointer;border:0;font:inherit}
+#sent{color:var(--forest);font-weight:700;min-height:1.5em}
+
+footer{background:var(--forest);color:var(--meadow);padding:36px 0;font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (prefers-reduced-motion:no-preference){.hero h1{animation:rise .8s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(18px)}}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Green Valley College</a>
+      <ul>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#campus">Campus</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <h1>Grow where the valley meets the future.</h1>
+      <p>Green Valley College offers hands-on degrees in small classes, with mentors who know your name. Applications for the next intake are open.</p>
+      <div class="btns">
+        <a class="btn primary" href="#admissions">Apply now</a>
+        <a class="btn ghost" href="#programs">Explore programs</a>
+      </div>
+    </div>
+    <svg class="hills" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 120 C200 40 360 40 560 110 S980 190 1180 90 1360 60 1440 90 V220 H0Z" fill="#2d6a4f"/>
+      <path d="M0 160 C240 100 420 110 640 150 S1040 200 1240 140 1380 130 1440 150 V220 H0Z" fill="#d8e6cf"/>
+      <path d="M0 200 C300 160 600 190 900 185 S1300 170 1440 190 V220 H0Z" fill="#f2f6ee"/>
+    </svg>
+  </div>
+
+  <section id="programs">
+    <div class="wrap">
+      <h2>Programs</h2>
+      <p class="lead">Choose a path, then shape it with electives, internships and field projects.</p>
+      <div class="programs">
+        <article class="prog"><h3>Environmental Science</h3><p>Ecology, water systems and climate fieldwork.</p><small>B.Sc. · 3 years</small></article>
+        <article class="prog"><h3>Computer Science</h3><p>Software, data and AI with real client projects.</p><small>B.Tech · 4 years</small></article>
+        <article class="prog"><h3>Business Studies</h3><p>Finance, marketing and entrepreneurship.</p><small>BBA · 3 years</small></article>
+        <article class="prog"><h3>Agriculture &amp; Food Tech</h3><p>Sustainable farming and food innovation.</p><small>B.Sc. · 3 years</small></article>
+        <article class="prog"><h3>Arts &amp; Humanities</h3><p>Literature, history, media and design.</p><small>B.A. · 3 years</small></article>
+        <article class="prog"><h3>Education</h3><p>Classroom practice from the first semester.</p><small>B.Ed. · 2 years</small></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="admissions" class="dark">
+    <div class="wrap">
+      <h2>How to apply</h2>
+      <p class="lead">Four steps from application to your first day. Ask our assistant in the corner if you get stuck.</p>
+      <ol class="timeline">
+        <li><strong>Submit your application</strong><span>Fill in the online form and upload your marksheets.</span></li>
+        <li><strong>Take the entrance test</strong><span>A 90-minute test, held online or on campus.</span></li>
+        <li><strong>Attend the interview</strong><span>A short conversation about your goals.</span></li>
+        <li><strong>Confirm your seat</strong><span>Pay the admission fee to secure your place.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="campus">
+    <div class="wrap">
+      <h2>Life on campus</h2>
+      <p class="lead">120 acres of orchards, labs and open lawns, with a hostel, library and sports grounds on site.</p>
+      <div class="stats">
+        <div><b>12:1</b>students per teacher</div>
+        <div><b>120</b>acres of campus</div>
+        <div><b>40+</b>student clubs</div>
+        <div><b>92%</b>placed within a year</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="dark">
+    <div class="wrap">
+      <h2>Contact us</h2>
+      <p class="lead">Send a question and the admissions office will reply within two working days.</p>
+      <form id="contactForm">
+        <div><label for="n">Name</label><input id="n" required></div>
+        <div><label for="e">Email</label><input id="e" type="email" required></div>
+        <div><label for="m">Message</label><textarea id="m" rows="4" required></textarea></div>
+        <button class="btn primary" type="submit">Send message</button>
+        <p id="sent" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Green Valley College</span>
+    <span>admissions@greenvalley.edu</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit',function(ev){
+  ev.preventDefault();
+  document.getElementById('sent').textContent='Message sent. We will reply by email.';
+  this.reset();
+});
+</script>
+
+<!-- Botpress chatbot -->
+<script src="https://cdn.botpress.cloud/webchat/v5.0/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2026/10/06/06/20261006065154-64AD25KG.js" defer></script>
+</body>
+</html>
